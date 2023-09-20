@@ -8,11 +8,13 @@
     <script>
       if ("onbeforeinstallprompt" in window) {
         // Add an event listener to the beforeinstallprompt event
+
+        console.log("On Before install prompt supported");
         window.addEventListener(
           "beforeinstallprompt",
           (event) => {
             // Prevent the default behavior of the event
-            event.preventDefault();
+            // event.preventDefault();
 
             console.log("Before install prompt event triggered");
 
@@ -42,6 +44,8 @@
           },
           { once: true }
         );
+      } else {
+        console.log("On Before install prompt NOT supported");
       }
     </script>
   </body>
