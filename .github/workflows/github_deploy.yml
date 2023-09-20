@@ -41,7 +41,10 @@ jobs:
         run: npm run build
       
       - name: Start server
-        run: npm run start
+        run: |
+              npm run start &
+              sleep 10 &&
+              wget --mirror http://localhost:3000 -P out --no-host-directories --page-requisites --adjust-extension
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
