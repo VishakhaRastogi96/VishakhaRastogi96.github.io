@@ -33,6 +33,7 @@ jobs:
       - name: Clean, Install & Lint
         run: npm run clean
       - run: npm install
+      - run: npm run postinstall
       - run: npm run lint
 
       # Runs a single command using the runners shell    
@@ -40,7 +41,7 @@ jobs:
         run: npm run build
       
       - name: Start server
-        run: npm run dev
+        run: npm run start
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
