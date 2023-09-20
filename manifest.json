@@ -11,7 +11,7 @@
   ],
   "icons": [
     {
-      "src": "/cloudlibraryIcon.jpeg",
+      "src": "cloudlibraryIcon.jpeg",
       "sizes": "225x225",
       "type": "image/png",
       "density": "0.75"
