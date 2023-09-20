@@ -26,7 +26,7 @@ export const links: LinksFunction = () => {
   return [{ rel: "manifest", href: "/resources/manifest.json" }];
 };
 
-export const loader: LoaderFunction = async ({ request, params }) => {
+export const loader: LoaderFunction = async () => {
   return json({});
 };
 
